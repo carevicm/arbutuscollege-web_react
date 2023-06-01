@@ -1,53 +1,69 @@
-interface Teacher {
-  readonly firstName: string;
-  readonly lastName: string; 
-  fullTimeEmployee: boolean;
-  location: string;
-  yearsOfExperience?: number;
-  /* eslint-disable @typescript-eslint/no-explicit-any */
-  [propName: string]: any;
-  /* eslint-enable @typescript-eslint/no-explicit-any */
+interface DirectorInterface {
+    workFromHome(): string;
+    getCoffeeBreak(): string;
+    workDirectorTasks(): string;
 }
 
-//Extending the Teacher class
-
-interface Directors extends Teacher {
-  numberOfReports: number;
+interface TeacherInterface {
+    workFromHome(): string;
+    getCoffeeBreak(): string;
+    workTeacherTasks(): string;
 }
 
+export class Director implements DirectorInterface {
+    workFromHome(): string {
+        return 'Working from home';
+    }
 
-interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+    getCoffeeBreak(): string {
+        return 'Getting a coffee break';
+    }
+
+    workDirectorTasks(): string {
+        return 'Getting to director tasks'
+    }
 }
 
-export const printTeacher: printTeacherFunction = function(firstName: string, lastName: string): string {
-  return `${firstName.charAt(0)}. ${lastName}`
+export class Teacher implements TeacherInterface {
+    workFromHome(): string {
+        return 'Cannot work from home';
+    }
+
+    getCoffeeBreak(): string {
+        return 'Cannot have a break';
+    }
+
+    workTeacherTasks(): string {
+        return 'Getting to work'
+    }
 }
 
+export function createEmployee(salary: number | string): Teacher | Director {
+    if (typeof salary === "number" && salary < 500) {
+        return new Teacher();
+    } else {
+        return new Director();
 
-interface StudentConstructor {
-    new(firstName: string, lastName: string): StudentClassInterface;
+    }
 }
-    
-interface StudentClassInterface {
-  workOnHomework(): string;
-  displayName(): string;
+
+export function isDirector(employee: DirectorInterface | TeacherInterface): employee is DirectorInterface {
+    return (employee as DirectorInterface).workDirectorTasks !== undefined
 }
-    
-export const StudentClass: StudentConstructor = class StudentClass implements StudentClassInterface {
-  firstName: string;
-  lastName: string;
-    
-  constructor(firstName: string, lastName: string) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-    
-  workOnHomework(): string {
-    return "Currently working";
-  }
-    
-  displayName(): string {
-    return this.firstName;
-  }
+
+export function executeWork(employee: DirectorInterface | TeacherInterface): string {
+    if(isDirector(employee)) {
+        return employee.workDirectorTasks()
+    }
+    return employee.workTeacherTasks()
+}
+
+type Subjects = 'Math' | 'History';
+
+export function teachClass(todayClass: Subjects): string {
+    if (todayClass === 'Math'){
+        return 'Teaching Math'
+    } else if (todayClass === 'History') {
+        return 'Teaching History'
+    }
 }
