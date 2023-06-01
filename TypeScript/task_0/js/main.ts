@@ -21,14 +21,28 @@ const student2: Student = {
 
 const studentsList: Array<Student> = [student1, student2];
 
+//Render a table with vanilla JS
+const body: HTMLBodyElement = document.getElementsByTagName('body')[0];
 const table: HTMLTableElement = document.createElement('table');
+const thead: HTMLTableSectionElement = document.createElement('thead');
 const tbody: HTMLTableSectionElement = document.createElement('tbody');
+const rowHead: HTMLTableRowElement = thead.insertRow(0);
+const cellHead1: HTMLTableCellElement = rowHead.insertCell(0);
+const cellHead2: HTMLTableCellElement = rowHead.insertCell(1);
 
-studentsList.forEach((student) => {
-  let row: HTMLTableRowElement = document.createElement('tr');
-  row.innerHTML = `<td>${student.firstName}</td><td>${student.location}</td>`;
-  tbody.appendChild(row);
-});
+cellHead1.innerHTML = 'firstName';
+cellHead2.innerHTML = 'location';
 
-table.appendChild(tbody);
-document.body.append(table);
+table.append(thead);
+
+studentsList.forEach((students) => {
+    const rows: HTMLTableRowElement = tbody.insertRow(0);
+    const cell1: HTMLTableCellElement = rows.insertCell(0);
+    const cell2: HTMLTableCellElement = rows.insertCell(1);
+  
+    cell1.innerHTML = students.firstName;
+    cell2.innerHTML = students.location;
+  });
+
+table.append(tbody);
+body.append(table);
