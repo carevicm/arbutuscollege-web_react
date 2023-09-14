@@ -1,7 +1,5 @@
-Readme
-
-
 Project badge
+100%
 Typescript
  Amateur
  By: Johann Kerbrat, Engineering Manager at Uber Works
@@ -68,10 +66,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_0/js/main.ts, task_0/package.json, task_0/.eslintrc.js, task_0/tsconfig.json, task_0/webpack.config.js
 Please review your task manually with the following checklist
-README.md is present
+npm run start-dev run the server and when open in the browser, a table with 2 lines and all students information is present
 
- 
-0/5 pts
+  
+5/5 pts
 1. Let's build a Teacher interface
 mandatory
 Create a directory task_1 and copy these configuration files into this folder: package.json, tsconfig.json, webpack.config.js
@@ -116,10 +114,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_1/js/main.ts, task_1/webpack.config.js, task_1/tsconfig.json, task_1/package.json
 Please review your task manually with the following checklist
-task_1/js/main.ts exists
+No error when npm run build
 
- 
-0/6 pts
+  
+6/6 pts
 2. Extending the Teacher class
 mandatory
 Write an interface named Directors that extends Teacher. It requires an attribute named numberOfReports(number)
@@ -148,9 +146,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_1/js/main.ts
 Please review your task manually with the following checklist
-task_1/js/main.ts exists
+Directors interface has a new mandatory attribute numberOfReports(number)
 
-0/2 pts
+ 
+2/2 pts
 3. Printing teachers
 mandatory
 Write a function printTeacher:
@@ -166,9 +165,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_1/js/main.ts
 Please review your task manually with the following checklist
-task_1/js/main.ts exists
+No error when run npm run build
 
-0/4 pts
+ 
+4/4 pts
 4. Writing a class
 mandatory
 Write a Class named StudentClass:
@@ -189,9 +189,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_1/js/main.ts
 Please review your task manually with the following checklist
-task_1/js/main.ts exists
+No error when run npm run build
 
-0/7 pts
+ 
+7/7 pts
 5. Advanced types Part 1
 mandatory
 Create the DirectorInterface interface with the 3 expected methods:
@@ -234,9 +235,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_2/js/main.ts, task_2/webpack.config.js, task_2/tsconfig.json, task_2/package.json
 Please review your task manually with the following checklist
-task_2/js/main.ts exists
+No error when run npm run build
 
-0/6 pts
+ 
+6/6 pts
 6. Creating functions specific to employees
 mandatory
 Write a function isDirector:
@@ -260,9 +262,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_2/js/main.ts
 Please review your task manually with the following checklist
-task_2/js/main.ts exists
+No errors when run npm run build
 
-0/3 pts
+ 
+3/3 pts
 7. String literal types
 mandatory
 Write a String literal type named Subjects allowing a variable to have the value Math or History only. Write a function named teachClass:
@@ -282,10 +285,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_2/js/main.ts
 Please review your task manually with the following checklist
-task_2/js/main.ts exists
+No errors when run npm run build
 
- 
-0/3 pts
+  
+3/3 pts
 8. Ambient Namespaces
 mandatory
 Create a directory called task_3 and copy these configuration files into it: package.json, webpack.config.js, tsconfig.json.
@@ -357,9 +360,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_3/js/main.ts, task_3/js/interface.ts, task_3/js/crud.d.ts
 Please review your task manually with the following checklist
-task_3/js/main.ts, task_3/js/interface.ts and task_3/js/crud.d.ts exist
+No errors when run npm run build
 
-0/9 pts
+ 
+9/9 pts
 9. Namespace & Declaration merging
 mandatory
 Create a new directory task_4 and copy the above tsconfig.json and put this package.json in there
@@ -415,9 +419,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_4/package.json, task_4/tsconfig.json, task_4/js/subjects/Cpp.ts, task_4/js/subjects/Java.ts, task_4/js/subjects/React.ts, task_4/js/subjects/Subject.ts, task_4/js/subjects/Teacher.ts
 Please review your task manually with the following checklist
-task_4/js/subjects/Cpp.ts, task_4/js/subjects/Java.ts, task_4/js/subjects/React.ts, task_4/js/subjects/Subject.ts and task_4/js/subjects/Teacher.ts are present
+No errors when run npm run build
 
-0/9 pts
+ 
+9/9 pts
 10. Update task_4/js/main.ts
 mandatory
 create and export a constant cpp for Cpp Subjects
@@ -433,9 +438,10 @@ GitHub repository: arbutuscollege-web_react
 Directory: TypeScript
 File: task_4/js/main.ts
 Please review your task manually with the following checklist
-task_4/js/main.ts exists
+No errors when run npm run build
 
-0/8 pts
+ 
+8/8 pts
 11. Brand convention & Nominal typing
 mandatory
 Create a directory task_5 and copy these configuration files into the root of task_5: package.json, tsconfig.json, webpack.config.js
